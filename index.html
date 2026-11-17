@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Beauty Corner | Artificial Jewellery, Howrah – Retail &amp; Wholesale</title>
+<meta name="description" content="Beauty Corner – artificial jewellery shop in Howrah AC Market, Dobson Road. Necklace sets, earrings, bangles, bridal jewellery. Retail and wholesale. Enquire on WhatsApp.">
+<meta property="og:title" content="Beauty Corner – Artificial Jewellery, Howrah">
+<meta property="og:description" content="Retail &amp; wholesale artificial jewellery. Shop G-1A, Howrah AC Market, 47 Dobson Road.">
+<meta name="theme-color" content="#5a1414">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --maroon-900:#3a0b0b;
+  --maroon-800:#4e1111;
+  --maroon-700:#641818;
+  --maroon-600:#7a2020;
+  --gold:#d9b24c;
+  --gold-light:#f1d68a;
+  --gold-deep:#a9822b;
+  --cream:#f7efe1;
+  --ink:#2b1a14;
+  --serif:"Cormorant Garamond",Georgia,serif;
+  --caps:"Cinzel","Cormorant Garamond",serif;
+  --sans:"Jost",system-ui,sans-serif;
+  --wa:"918017071702";
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--cream);background:var(--maroon-800);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+
+/* leather-like texture used on the visiting card */
+.texture{
+  background-color:var(--maroon-700);
+  background-image:
+    radial-gradient(circle at 20% 30%,rgba(255,255,255,.035) 0 1px,transparent 1.5px),
+    radial-gradient(circle at 70% 60%,rgba(0,0,0,.12) 0 1px,transparent 1.5px),
+    radial-gradient(circle at 40% 80%,rgba(255,255,255,.03) 0 1px,transparent 1.5px),
+    linear-gradient(160deg,var(--maroon-600),var(--maroon-800));
+  background-size:5px 5px,7px 7px,9px 9px,100% 100%;
+}
+.gold-text{
+  background:linear-gradient(180deg,var(--gold-light) 0%,var(--gold) 45%,var(--gold-deep) 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.wrap{width:min(1160px,100% - 32px);margin-inline:auto}
+.eyebrow{font-family:var(--caps);letter-spacing:.32em;font-size:.78rem;color:var(--gold);text-transform:uppercase}
+h2{font-family:var(--caps);font-weight:500;font-size:clamp(1.8rem,4vw,2.6rem);letter-spacing:.08em;line-height:1.2}
+.divider{display:flex;align-items:center;gap:12px;color:var(--gold);margin:18px 0 22px}
+.divider::before,.divider::after{content:"";height:1px;width:64px;background:linear-gradient(90deg,transparent,var(--gold))}
+.divider::after{transform:scaleX(-1)}
+.center{text-align:center}
+.center .divider{justify-content:center}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border-radius:2px;font-family:var(--sans);font-weight:500;letter-spacing:.12em;text-transform:uppercase;font-size:.82rem;transition:transform .2s,box-shadow .2s,background .2s;cursor:pointer;border:0}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-gold{background:linear-gradient(180deg,var(--gold-light),var(--gold) 55%,var(--gold-deep));color:var(--maroon-900);box-shadow:0 6px 20px rgba(0,0,0,.25)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(0,0,0,.35)}
+.btn-line{border:1px solid var(--gold);color:var(--gold-light);background:transparent}
+.btn-line:hover{background:rgba(217,178,76,.12)}
+
+/* header */
+header{position:fixed;inset:0 0 auto;z-index:50;transition:background .3s,box-shadow .3s}
+header.scrolled{background:rgba(58,11,11,.94);backdrop-filter:blur(6px);box-shadow:0 2px 18px rgba(0,0,0,.3)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand svg{width:40px;height:40px}
+.brand span{font-family:var(--caps);letter-spacing:.2em;font-size:1rem}
+.nav ul{display:flex;gap:30px;list-style:none;font-size:.85rem;letter-spacing:.14em;text-transform:uppercase}
+.nav ul a{opacity:.85;transition:opacity .2s,color .2s}
+.nav ul a:hover{opacity:1;color:var(--gold-light)}
+.menu-btn{display:none;background:none;border:0;color:var(--gold);width:40px;height:40px;cursor:pointer}
+@media (max-width:820px){
+  .menu-btn{display:block}
+  .nav ul{position:absolute;top:72px;left:0;right:0;flex-direction:column;gap:0;background:var(--maroon-900);max-height:0;overflow:hidden;transition:max-height .3s}
+  .nav ul.open{max-height:360px}
+  .nav ul li a{display:block;padding:16px 24px;border-top:1px solid rgba(217,178,76,.15)}
+}
+
+/* hero */
+.hero{min-height:100svh;display:grid;place-items:center;position:relative;padding:110px 0 70px;overflow:hidden}
+.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 40%,rgba(30,4,4,.55));pointer-events:none}
+.hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:auto 1px auto;align-items:center;gap:clamp(24px,5vw,60px)}
+.monogram{width:clamp(150px,22vw,250px);filter:drop-shadow(0 8px 18px rgba(0,0,0,.35))}
+.vline{height:220px;width:1px;background:linear-gradient(transparent,var(--gold),transparent)}
+.hero h1{font-family:var(--caps);font-weight:500;font-size:clamp(2.6rem,7vw,5rem);letter-spacing:.1em;line-height:1.05}
+.hero .script{font-family:var(--serif);font-style:italic;font-size:clamp(1.4rem,3vw,2rem);color:var(--cream);margin-top:6px}
+.hero .tag{font-family:var(--caps);letter-spacing:.3em;font-size:clamp(.72rem,1.4vw,.9rem);color:var(--gold);margin-top:6px}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+.hero .divider{margin:14px 0 6px}
+@media (max-width:720px){
+  .hero-inner{grid-template-columns:1fr;text-align:center;justify-items:center}
+  .vline{width:120px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+  .hero .divider{justify-content:center}
+  .hero .ctas{justify-content:center}
+}
+.scroll-cue{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);z-index:1;color:var(--gold);font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;opacity:.75}
+
+/* sections */
+section{padding:clamp(70px,10vw,110px) 0}
+.light{background:var(--cream);color:var(--ink)}
+.light .eyebrow{color:var(--gold-deep)}
+.light h2{color:var(--maroon-700)}
+.light .divider{color:var(--gold-deep)}
+.lead{font-family:var(--serif);font-size:clamp(1.15rem,2vw,1.35rem);max-width:720px;margin-inline:auto}
+
+/* about */
+.about-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:50px}
+.feature{padding:32px 26px;border:1px solid rgba(169,130,43,.35);background:#fffaf1;text-align:center}
+.feature svg{width:42px;height:42px;color:var(--gold-deep);margin:0 auto 14px}
+.feature h3{font-family:var(--caps);font-weight:500;letter-spacing:.08em;color:var(--maroon-700);font-size:1.1rem;margin-bottom:8px}
+.feature p{font-size:.95rem;color:#5b4639}
+@media (max-width:820px){.about-grid{grid-template-columns:1fr}}
+
+/* collections */
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:46px}
+@media (max-width:960px){.grid{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:680px){.grid{grid-template-columns:repeat(2,1fr);gap:12px}}
+.card{position:relative;aspect-ratio:4/5;overflow:hidden;border:1px solid rgba(217,178,76,.35);display:block;isolation:isolate}
+.card .ph{position:absolute;inset:0;display:grid;place-items:center;z-index:-2}
+.card .ph svg{width:44%;color:var(--gold);opacity:.85;transition:transform .5s}
+.card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-1;transition:transform .6s}
+.card::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 45%,rgba(30,4,4,.85));z-index:-1}
+.card .meta{position:absolute;left:0;right:0;bottom:0;padding:16px}
+.card h3{font-family:var(--caps);font-weight:500;letter-spacing:.06em;font-size:clamp(.9rem,1.6vw,1.05rem)}
+.card .ask{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-light);opacity:0;transform:translateY(6px);transition:.3s;display:inline-flex;align-items:center;gap:6px}
+.card:hover img,.card:hover .ph svg{transform:scale(1.06)}
+.card:hover .ask,.card:focus-visible .ask{opacity:1;transform:none}
+@media (hover:none){.card .ask{opacity:1;transform:none}}
+.note{margin-top:26px;font-family:var(--serif);font-style:italic;font-size:1.1rem;opacity:.85}
+
+/* wholesale band */
+.band{border-top:1px solid rgba(217,178,76,.3);border-bottom:1px solid rgba(217,178,76,.3);background:var(--maroon-900)}
+.band-inner{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:center}
+.band ul{list-style:none;display:grid;gap:12px;margin-top:20px}
+.band li{display:flex;gap:12px;align-items:flex-start}
+.band li::before{content:"◆";color:var(--gold);font-size:.7rem;margin-top:6px}
+.band-box{padding:34px;border:1px solid var(--gold);text-align:center}
+.band-box p{font-family:var(--serif);font-size:1.2rem;margin-bottom:20px}
+@media (max-width:820px){.band-inner{grid-template-columns:1fr}}
+
+/* instagram */
+.insta-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin:40px 0 34px}
+.insta-grid a{aspect-ratio:1;position:relative;overflow:hidden;border:1px solid rgba(169,130,43,.3);display:grid;place-items:center}
+.insta-grid a:nth-child(odd){background:linear-gradient(140deg,#7a2020,#4e1111)}
+.insta-grid a:nth-child(even){background:linear-gradient(140deg,#e9d6ad,#c9a55a)}
+.insta-grid img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.insta-grid svg{width:30%;color:var(--gold-light);opacity:.8}
+.insta-grid a:nth-child(even) svg{color:var(--maroon-700)}
+@media (max-width:680px){.insta-grid{grid-template-columns:repeat(3,1fr)}}
+.light .btn-line{color:var(--maroon-700);border-color:var(--gold-deep)}
+
+/* visit */
+.visit-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:36px;margin-top:46px;align-items:stretch}
+.info{display:grid;gap:26px;align-content:start}
+.info-item{display:flex;gap:16px}
+.info-item svg{width:24px;height:24px;color:var(--gold);flex:none;margin-top:4px}
+.info-item h3{font-family:var(--caps);font-weight:500;letter-spacing:.14em;font-size:.85rem;color:var(--gold);margin-bottom:4px}
+.info-item p,.info-item a{font-family:var(--serif);font-size:1.2rem;line-height:1.45}
+.info-item a:hover{color:var(--gold-light)}
+.map{min-height:360px;border:1px solid rgba(217,178,76,.4)}
+.map iframe{width:100%;height:100%;min-height:360px;border:0;filter:sepia(.25) saturate(.9)}
+@media (max-width:820px){.visit-grid{grid-template-columns:1fr}}
+
+footer{background:var(--maroon-900);padding:40px 0 100px;text-align:center;border-top:1px solid rgba(217,178,76,.25)}
+footer .brand{justify-content:center;margin-bottom:10px}
+footer p{font-size:.85rem;opacity:.7}
+
+/* floating whatsapp */
+.wa-float{position:fixed;right:18px;bottom:18px;z-index:60;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.35);transition:transform .2s}
+.wa-float:hover{transform:scale(1.08)}
+.wa-float svg{width:30px;height:30px;color:#fff}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<!-- SVG sprites -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="goldGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f6dd92"/><stop offset=".5" stop-color="#d9b24c"/><stop offset="1" stop-color="#a9822b"/>
+    </linearGradient>
+    <radialGradient id="gem" cx=".4" cy=".35" r=".7">
+      <stop offset="0" stop-color="#ffffff"/><stop offset=".6" stop-color="#e3e8ee"/><stop offset="1" stop-color="#9aa5b1"/>
+    </radialGradient>
+  </defs>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91A9.85 9.85 0 0 0 12.04 2Zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23a8.2 8.2 0 0 1 8.23 8.24c0 4.54-3.7 8.23-8.23 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23a7.5 7.5 0 0 1-1.38-1.72c-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.43-.06-.13-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.42h-.48a.92.92 0 0 0-.66.31c-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.13.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.29Z"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M7 2.8h10A4.2 4.2 0 0 1 21.2 7v10a4.2 4.2 0 0 1-4.2 4.2H7A4.2 4.2 0 0 1 2.8 17V7A4.2 4.2 0 0 1 7 2.8Z"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M5 3.5h3.2l1.6 4-2 1.3a11 11 0 0 0 5.4 5.4l1.3-2 4 1.6V17a2 2 0 0 1-2 2A15.5 15.5 0 0 1 3 5.5a2 2 0 0 1 2-2Z"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path fill="none" stroke="currentColor" stroke-width="1.6" d="M12 7.5V12l3 2"/></symbol>
+  <!-- jewellery line icons -->
+  <symbol id="j-necklace" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="1.6"><path d="M10 8c2 20 10 30 22 30S52 28 54 8"/><path d="M16 10c2 15 8 22 16 22s14-7 16-22"/><path d="M32 38v4"/><path d="M32 42l-6 8 6 8 6-8z"/><circle cx="22" cy="31" r="1.6"/><circle cx="42" cy="31" r="1.6"/><circle cx="14" cy="22" r="1.4"/><circle cx="50" cy="22" r="1.4"/></g></symbol>
+  <symbol id="j-earring" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="1.6"><path d="M32 6a4 4 0 1 1 0 8"/><path d="M32 14v4"/><path d="M18 30a14 14 0 0 1 28 0z"/><path d="M18 30c0 0 2 4 4 4M46 30c0 0-2 4-4 4"/><circle cx="22" cy="40" r="1.6"/><circle cx="27" cy="44" r="1.6"/><circle cx="32" cy="46" r="1.8"/><circle cx="37" cy="44" r="1.6"/><circle cx="42" cy="40" r="1.6"/><circle cx="32" cy="24" r="3"/><path d="M32 48v6"/><circle cx="32" cy="57" r="2.4"/></g></symbol>
+  <symbol id="j-bangle" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="1.6"><ellipse cx="32" cy="34" rx="22" ry="14"/><ellipse cx="32" cy="34" rx="17" ry="9.5"/><ellipse cx="32" cy="28" rx="22" ry="14"/><path d="M14 22l3 3M20 18l2 3.5M28 15.5l.5 4M36 15.5l-.5 4M44 18l-2 3.5M50 22l-3 3"/></g></symbol>
+  <symbol id="j-tikka" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="32" cy="6" r="2.5"/><path d="M32 8.5v26"/><circle cx="32" cy="16" r="1.2"/><circle cx="32" cy="24" r="1.2"/><path d="M32 34l-10 8 10 12 10-12z"/><circle cx="32" cy="44" r="3"/><path d="M26 54l-2 5M32 56v5M38 54l2 5"/></g></symbol>
+  <symbol id="j-ring" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="32" cy="40" r="16"/><circle cx="32" cy="40" r="12"/><path d="M24 18l8-10 8 10-8 8z"/><path d="M24 18h16M32 8v18"/></g></symbol>
+  <symbol id="j-bridal" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 10c1 12 6 20 14 24M56 10c-1 12-6 20-14 24"/><path d="M22 34c3 2 6 3 10 3s7-1 10-3"/><path d="M14 12c2 10 8 18 18 18s16-8 18-18"/><path d="M26 37l6 10 6-10"/><circle cx="32" cy="52" r="4"/><circle cx="20" cy="24" r="1.4"/><circle cx="44" cy="24" r="1.4"/><path d="M20 44l-2 6M44 44l2 6"/><circle cx="17.5" cy="52" r="1.8"/><circle cx="46.5" cy="52" r="1.8"/></g></symbol>
+  <symbol id="j-hair" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="1.6"><path d="M10 44c6-20 38-20 44 0"/><path d="M16 40c5-12 27-12 32 0"/><circle cx="32" cy="24" r="4"/><circle cx="20" cy="30" r="2.5"/><circle cx="44" cy="30" r="2.5"/><path d="M32 28v8M28 34l-3 6M36 34l3 6"/></g></symbol>
+  <symbol id="j-anklet" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 26c6 10 14 14 24 14s18-4 24-14"/><path d="M14 33v5M22 37v6M32 40v6M42 37v6M50 33v5"/><circle cx="14" cy="40" r="2"/><circle cx="22" cy="45" r="2"/><circle cx="32" cy="48" r="2"/><circle cx="42" cy="45" r="2"/><circle cx="50" cy="40" r="2"/></g></symbol>
+  <symbol id="i-gem" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 22l8-10h20l8 10-18 30z"/><path d="M14 22h36M22 12l4 10 6 30 6-30 4-10M26 22l6-10 6 10"/></g></symbol>
+  <symbol id="i-store" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="1.6"><path d="M10 26l4-14h36l4 14"/><path d="M10 26c0 4 3 6 6.5 6S23 30 23 26c0 4 3 6 6.5 6S36 30 36 26c0 4 3 6 6.5 6S49 30 49 26c0 4 2 6 5 6"/><path d="M14 32v20h36V32"/><path d="M26 52V40h12v12"/></g></symbol>
+  <symbol id="i-box" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="1.6"><path d="M10 20l22-10 22 10v26L32 56 10 46z"/><path d="M10 20l22 10 22-10M32 30v26"/><path d="M21 15l22 10v8"/></g></symbol>
+  <!-- B monogram -->
+  <symbol id="logo-b" viewBox="0 0 200 220">
+    <g fill="none" stroke="url(#goldGrad)" stroke-linecap="round">
+      <path d="M86 30c-22-4-46 6-52 24-4 12 6 20 16 16" stroke-width="5"/>
+      <path d="M100 26c-4 40-10 100-22 140-6 20-22 34-40 32-18-2-26-18-20-32 8-18 34-18 46-4" stroke-width="10"/>
+      <path d="M96 30c30-16 70-10 72 18 2 24-24 38-50 42 34-4 62 10 60 40-2 34-44 52-86 40" stroke-width="9"/>
+      <path d="M118 90c-10 2-18 2-24 0" stroke-width="4"/>
+    </g>
+    <g transform="translate(50 172)">
+      <circle r="14" fill="url(#gem)" stroke="#c9d1d9" stroke-width="1"/>
+      <path d="M-14 0h28M-7-12l7 12 7-12M-7 12l7-12 7 12M-12-7l12 7 12-7" stroke="#8b96a3" stroke-width=".8" fill="none"/>
+    </g>
+  </symbol>
+</svg>
+
+<header id="top">
+  <div class="wrap nav">
+    <a href="#home" class="brand" aria-label="Beauty Corner home">
+      <svg><use href="#logo-b"/></svg>
+      <span class="gold-text">BEAUTY CORNER</span>
+    </a>
+    <button class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+      <svg viewBox="0 0 24 24" width="28" height="28"><path d="M3 7h18M3 12h18M3 17h18" stroke="currentColor" stroke-width="1.6" fill="none"/></svg>
+    </button>
+    <ul id="menu">
+      <li><a href="#about">About</a></li>
+      <li><a href="#collections">Collections</a></li>
+      <li><a href="#wholesale">Wholesale</a></li>
+      <li><a href="#instagram">Instagram</a></li>
+      <li><a href="#visit">Visit Us</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+  <section class="hero texture" id="home">
+    <div class="wrap hero-inner">
+      <svg class="monogram" viewBox="0 0 200 220" role="img" aria-label="Beauty Corner monogram"><use href="#logo-b"/></svg>
+      <div class="vline" aria-hidden="true"></div>
+      <div>
+        <h1 class="gold-text">BEAUTY<br>CORNER</h1>
+        <div class="divider" aria-hidden="true">✺</div>
+        <p class="script">Artificial Jewellery</p>
+        <p class="tag">RETAIL &amp; WHOLESALE</p>
+        <div class="ctas">
+          <a class="btn btn-gold wa-link" data-msg="Hi Beauty Corner! I'd like to know more about your jewellery collection." href="#"><svg><use href="#i-wa"/></svg>Enquire on WhatsApp</a>
+          <a class="btn btn-line" href="#collections">View Collections</a>
+        </div>
+      </div>
+    </div>
+    <p class="scroll-cue">Scroll</p>
+  </section>
+
+  <section class="light" id="about">
+    <div class="wrap center reveal">
+      <p class="eyebrow">Our Story</p>
+      <h2>Jewellery for Every Celebration</h2>
+      <div class="divider" aria-hidden="true">✺</div>
+      <p class="lead">At Beauty Corner in Howrah AC Market, we bring you a hand-picked range of artificial jewellery – from everyday earrings to statement bridal sets. Quality finishes, the latest designs, and prices that make sense, whether you're buying one piece or stocking your store.</p>
+      <div class="about-grid">
+        <div class="feature"><svg><use href="#i-gem"/></svg><h3>Latest Designs</h3><p>Kundan, polki, American diamond, oxidised and temple styles, updated every season.</p></div>
+        <div class="feature"><svg><use href="#i-store"/></svg><h3>Retail</h3><p>Visit our shop to try pieces in person and find the perfect match for your outfit.</p></div>
+        <div class="feature"><svg><use href="#i-box"/></svg><h3>Wholesale</h3><p>Bulk orders for resellers and boutiques at wholesale rates. Enquire on WhatsApp.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="texture" id="collections">
+    <div class="wrap center">
+      <div class="reveal">
+        <p class="eyebrow">Shop by Category</p>
+        <h2 class="gold-text">Our Collections</h2>
+        <div class="divider" aria-hidden="true">✺</div>
+      </div>
+      <!-- To use real photos: put an image in /images with the file name shown in src. Until then, an icon is shown. -->
+      <div class="grid reveal" id="collection-grid"></div>
+      <p class="note">Tap any collection to ask for designs and prices on WhatsApp.</p>
+    </div>
+  </section>
+
+  <section class="band" id="wholesale">
+    <div class="wrap band-inner reveal">
+      <div>
+        <p class="eyebrow">For Resellers &amp; Boutiques</p>
+        <h2 class="gold-text">Wholesale Orders</h2>
+        <ul>
+          <li>Bulk pricing on necklace sets, earrings, bangles and more</li>
+          <li>Fresh designs regularly from our Howrah store</li>
+          <li>Catalogue and rates shared on WhatsApp</li>
+          <li>Visit the shop to select pieces in person</li>
+        </ul>
+      </div>
+      <div class="band-box">
+        <p>Running a boutique or reselling online? Ask for our wholesale catalogue.</p>
+        <a class="btn btn-gold wa-link" data-msg="Hi Beauty Corner! I'm interested in wholesale. Please share your catalogue and rates." href="#"><svg><use href="#i-wa"/></svg>Wholesale Enquiry</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="light" id="instagram">
+    <div class="wrap center reveal">
+      <p class="eyebrow">Follow Us</p>
+      <h2>@__beautycorner__</h2>
+      <div class="divider" aria-hidden="true">✺</div>
+      <p class="lead">New arrivals go up on Instagram first. Follow us to see the latest designs.</p>
+      <!-- Replace with your own post photos: images/insta-1.jpg ... insta-6.jpg -->
+      <div class="insta-grid" id="insta-grid"></div>
+      <a class="btn btn-line" href="https://www.instagram.com/__beautycorner__/" target="_blank" rel="noopener"><svg><use href="#i-ig"/></svg>Follow on Instagram</a>
+    </div>
+  </section>
+
+  <section class="texture" id="visit">
+    <div class="wrap">
+      <div class="center reveal">
+        <p class="eyebrow">Find Us</p>
+        <h2 class="gold-text">Visit Our Store</h2>
+        <div class="divider" aria-hidden="true">✺</div>
+      </div>
+      <div class="visit-grid reveal">
+        <div class="info">
+          <div class="info-item"><svg><use href="#i-pin"/></svg><div><h3>Address</h3><p>Shop G-1A, Howrah AC Market,<br>47, Dobson Road, Howrah – 711101</p></div></div>
+          <div class="info-item"><svg><use href="#i-wa"/></svg><div><h3>WhatsApp</h3><a class="wa-link" data-msg="Hi Beauty Corner!" href="#">+91 80170 71702</a></div></div>
+          <div class="info-item"><svg><use href="#i-phone"/></svg><div><h3>Call</h3><a href="tel:+918017071702">+91 80170 71702</a><br><a href="tel:+919748850345">+91 97488 50345</a></div></div>
+          <div class="info-item"><svg><use href="#i-ig"/></svg><div><h3>Instagram</h3><a href="https://www.instagram.com/__beautycorner__/" target="_blank" rel="noopener">@__beautycorner__</a></div></div>
+          <div><a class="btn btn-gold" href="https://www.google.com/maps/search/?api=1&query=Howrah+AC+Market+47+Dobson+Road+Howrah+711101" target="_blank" rel="noopener"><svg><use href="#i-pin"/></svg>Get Directions</a></div>
+        </div>
+        <div class="map">
+          <iframe title="Map to Beauty Corner, Howrah AC Market" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Howrah%20AC%20Market%2C%2047%20Dobson%20Road%2C%20Howrah%20711101&z=16&output=embed"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="brand"><svg width="36" height="36"><use href="#logo-b"/></svg><span class="gold-text">BEAUTY CORNER</span></div>
+    <p>Sandeep Jajodia &amp; Sarita Jajodia · Artificial Jewellery · Retail &amp; Wholesale</p>
+    <p>© <span id="yr"></span> Beauty Corner, Howrah</p>
+  </div>
+</footer>
+
+<a class="wa-float wa-link" data-msg="Hi Beauty Corner! I'd like to know more about your jewellery." href="#" aria-label="Chat on WhatsApp"><svg><use href="#i-wa"/></svg></a>
+
+<script>
+// ---- Edit these to update the site ----
+const WHATSAPP = "918017071702";
+const COLLECTIONS = [
+  {name:"Necklace Sets",   icon:"j-necklace", img:"images/necklace-sets.jpg"},
+  {name:"Earrings",        icon:"j-earring",  img:"images/earrings.jpg"},
+  {name:"Bangles & Kadas", icon:"j-bangle",   img:"images/bangles.jpg"},
+  {name:"Bridal Sets",     icon:"j-bridal",   img:"images/bridal-sets.jpg"},
+  {name:"Maang Tikka",     icon:"j-tikka",    img:"images/maang-tikka.jpg"},
+  {name:"Rings",           icon:"j-ring",     img:"images/rings.jpg"},
+  {name:"Hair Accessories",icon:"j-hair",     img:"images/hair-accessories.jpg"},
+  {name:"Anklets",         icon:"j-anklet",   img:"images/anklets.jpg"}
+];
+const INSTA_ICONS = ["j-necklace","j-earring","j-bangle","j-bridal","j-tikka","j-ring"];
+// ---------------------------------------
+
+const waUrl = msg => `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`;
+const hideBroken = 'onerror="this.remove()"';
+
+document.getElementById("collection-grid").innerHTML = COLLECTIONS.map(c => `
+  <a class="card texture" target="_blank" rel="noopener" href="${waUrl(`Hi Beauty Corner! Please share designs and prices for ${c.name}.`)}">
+    <div class="ph"><svg><use href="#${c.icon}"/></svg></div>
+    <img src="${c.img}" alt="${c.name}" loading="lazy" ${hideBroken}>
+    <div class="meta"><h3 class="gold-text">${c.name}</h3><span class="ask"><svg width="14" height="14"><use href="#i-wa"/></svg>Ask on WhatsApp</span></div>
+  </a>`).join("");
+
+document.getElementById("insta-grid").innerHTML = INSTA_ICONS.map((ic,i) => `
+  <a href="https://www.instagram.com/__beautycorner__/" target="_blank" rel="noopener" aria-label="Instagram post ${i+1}">
+    <svg><use href="#${ic}"/></svg>
+    <img src="images/insta-${i+1}.jpg" alt="" loading="lazy" ${hideBroken}>
+  </a>`).join("");
+
+document.querySelectorAll(".wa-link").forEach(a => {
+  a.href = waUrl(a.dataset.msg || "Hi Beauty Corner!");
+  a.target = "_blank"; a.rel = "noopener";
+});
+
+document.getElementById("yr").textContent = new Date().getFullYear();
+
+const header = document.querySelector("header");
+const onScroll = () => header.classList.toggle("scrolled", scrollY > 40);
+addEventListener("scroll", onScroll, {passive:true}); onScroll();
+
+const btn = document.querySelector(".menu-btn"), menu = document.getElementById("menu");
+btn.addEventListener("click", () => { const o = menu.classList.toggle("open"); btn.setAttribute("aria-expanded", o); });
+menu.addEventListener("click", e => { if (e.target.tagName === "A") { menu.classList.remove("open"); btn.setAttribute("aria-expanded", false); } });
+
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), {threshold:.12});
+document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+</script>
+</body>
+</html>
